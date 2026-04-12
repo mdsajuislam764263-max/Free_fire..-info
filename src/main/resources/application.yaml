@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: freefirebot
+bot:
+  token: ${BOT_TOKEN}
+  username: ${BOT_USERNAME}
+
+freefire:
+  api:
+    player-info-url: https://freefire-api-six.vercel.app
+    ban-check-url: https://ff.garena.com/api/antihack/check_banned
