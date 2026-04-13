@@ -1,16 +1,18 @@
 package com.devlil0.freefirebot.service;
 
 import com.devlil0.freefirebot.helper.FormatTimeStamp;
-import com.devlil0.freefirebot.model.dto.BanResponse;
-import com.devlil0.freefirebot.model.dto.PlayerInfoResponse;
+import com.devlil0.freefirebot.model.dto.response.BanResponse;
+import com.devlil0.freefirebot.model.dto.response.PlayerInfoResponse;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-@RequiredArgsConstructor
+
 public class BanResponseService {
 
-    private final FreeFireService freeFireService;
+    @Autowired
+    private FreeFireService freeFireService;
 
     public String checkBan(String uid) {
         BanResponse ban = freeFireService.checkBan(uid);

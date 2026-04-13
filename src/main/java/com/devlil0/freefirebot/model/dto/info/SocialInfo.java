@@ -1,4 +1,4 @@
-package com.devlil0.freefirebot.model.dto;
+package com.devlil0.freefirebot.model.dto.info;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
@@ -11,5 +11,6 @@ public class SocialInfo {
     private String gender;
     private String timeactive;
     private String rankshow;
+    private String modeprefer;
 
 }

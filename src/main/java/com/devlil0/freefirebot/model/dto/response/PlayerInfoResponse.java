@@ -1,5 +1,9 @@
-package com.devlil0.freefirebot.model.dto;
+package com.devlil0.freefirebot.model.dto.response;
 
+import com.devlil0.freefirebot.model.dto.info.BasicInfo;
+import com.devlil0.freefirebot.model.dto.info.ClanBasicInfo;
+import com.devlil0.freefirebot.model.dto.info.CreditScoreInfo;
+import com.devlil0.freefirebot.model.dto.info.SocialInfo;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;

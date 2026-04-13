@@ -1,4 +1,4 @@
-package com.devlil0.freefirebot.model.dto;
+package com.devlil0.freefirebot.model.dto.info;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;

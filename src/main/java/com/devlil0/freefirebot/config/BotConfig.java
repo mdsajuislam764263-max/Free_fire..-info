@@ -1,5 +1,6 @@
-package com.devlil0.freefirebot.bot;
+package com.devlil0.freefirebot.config;
 
+import com.devlil0.freefirebot.bot.FreeFireBot;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.telegram.telegrambots.meta.TelegramBotsApi;

@@ -1,7 +1,8 @@
 package com.devlil0.freefirebot.service;
 
-import com.devlil0.freefirebot.model.dto.BanResponse;
-import com.devlil0.freefirebot.model.dto.PlayerInfoResponse;
+import com.devlil0.freefirebot.model.dto.response.BanResponse;
+import com.devlil0.freefirebot.model.dto.response.PlayerInfoResponse;
+import com.devlil0.freefirebot.model.dto.response.PlayerStatsResponse;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -17,6 +18,7 @@ public class FreeFireService {
 
     private String banCheckUrl;
 
+    private String playerStats;
 
     public FreeFireService(
             @Value("${freefire.api.player-info-url}") String playerInfoUrl,
@@ -63,5 +65,19 @@ public class FreeFireService {
             return null;
         }
     }
+
+    public PlayerStatsResponse playerStatsResponse(String uid, String gamemode){
+        try{
+            return webClient.get()
+                    .uri(playerInfoUrl + "/get_player_stats?server=BR&uid=" + uid + "&gamemode=" + gamemode + "&matchmode=CAREER")
+                    .retrieve()
+                    .bodyToMono(PlayerStatsResponse.class)
+                    .block();
+        } catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
+
 
 }

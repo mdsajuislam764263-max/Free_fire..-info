@@ -1,4 +1,4 @@
-package com.devlil0.freefirebot.model.dto;
+package com.devlil0.freefirebot.model.dto.info;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
@@ -15,5 +15,8 @@ public class BasicInfo {
     private int liked;
     private String lastloginat;
     private String createat;
+
+
+
 
 }
