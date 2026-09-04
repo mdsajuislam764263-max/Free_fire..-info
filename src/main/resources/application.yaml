@@ -2,8 +2,8 @@ spring:
   application:
     name: freefirebot
 bot:
-  token: ${BOT_TOKEN}
-  username: ${BOT_USERNAME}
+  token: ${8971375818:AAFiLVlkvi3eno82qsztoeHfnAYOEX-42qY}
+  username: ${@ffplyerinfo_bot}
 
 freefire:
   api:
